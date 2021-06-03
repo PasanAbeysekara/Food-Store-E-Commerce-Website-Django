@@ -1,0 +1,26 @@
+{% extends 'base_layout.html' %} {% block content %}
+<h1>Cart</h1>
+<br />
+<h6>You bought {{total_items}} items !</h6>
+
+{% for key,value in d.items %}
+<mark>{{key}} x {{value}}</mark><br />
+{% endfor %}
+
+<h6>Total payment is {{total}}(LKR)/= !</h6>
+<br />
+<a href="{% url 'purchase:payment' %}" class="btn btn-success">Confirm</a>
+<a href="{% url 'products:home' %}" class="btn btn-info">Continue Shopping</a>
+<br /><br />
+{% for product in products %}
+<fieldset class="border p-3">
+  <h3>{{product.chosen_productname}}</h3>
+  <h5>Price per 100g LKR : {{product.chosen_price}}</h5>
+  <a
+    href="{% url 'purchase:delete' pk=product.id %}"
+    class="btn btn-danger btn-sm"
+    >Delete</a
+  >
+</fieldset>
+
+{% endfor %} {% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base_layout.html' %} {% block content %}
+<h2>Payment Form</h2>
+<form action="{% url 'purchase:payment' %}" method="post">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label class="form-label">First Name</label>
+    {{form.first_name}}
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Last Name</label>
+    {{form.last_name}}
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email address</label>
+    {{form.email}}
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Card Number</label>
+    {{form.card_number}}
+  </div>
+
+  <button type="submit" class="btn btn-primary">Pay</button>
+</form>
+{% endblock %}
