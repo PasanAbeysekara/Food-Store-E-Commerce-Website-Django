@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %} {% block content %}
+<h2>Food store products list</h2>
+{% for product in products %}
+<div class="product">
+  <fieldset class="border p-3">
+    <a href={% url 'products:detail' pk=product.id %} class="link-success"><h3>{{product.productname}}</h3></a>
+    <h4>Price per <mark>100</mark>g LKR : <code>{{product.price}}</code></h4>
+    <a href="{% url 'products:delete' pk=product.id %}" class="btn btn-danger btn-sm">Delete</a>
+  </fieldset>
+</div>
+{% endfor %}
+<div class="">
+  <a href="{% url 'products:create' %}" class="btn btn-outline-secondary">Create</a>
+</div>
+{% endblock %}

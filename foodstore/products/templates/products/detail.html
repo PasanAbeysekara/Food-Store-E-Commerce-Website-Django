@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %} {% block content %}
+<h2>{{product.productname}}</h2>
+<hr />
+<br />
+<h5>Price per <mark>100</mark>g LKR : <code>{{product.price}}</code></h5>
+<br />
+<a
+  href="{% url 'purchase:cart' product_id=product.id %}"
+  class="btn btn-info btn-lg"
+  >Add to cart</a
+>
+{% endblock %}
