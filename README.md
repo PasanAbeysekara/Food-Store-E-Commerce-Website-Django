@@ -13,6 +13,7 @@ Food store full stack ecommerce website using django as backend &amp; bootstrap 
 
 ## cart page
 (click "**Add to Cart**" button on product detail page)<br/>
+You have to authorize by login or signup to visit to **cart page**<br/>
 You can add more products to cart by clicking "**Continue Shopping**" button
 
 ![cart](https://user-images.githubusercontent.com/69195287/120580996-b1d23e80-c447-11eb-950d-47597ed33fb6.png)
