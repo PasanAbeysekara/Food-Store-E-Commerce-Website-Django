@@ -1,6 +1,20 @@
 # Food-Store-website-Django
-Food store full stack ecommerce website using django as backend &amp; bootstrap as frontend
+Food store full stack ecommerce website using django as backend &amp; bootstrap as frontend<br />
 
+* In these source files I try my best to upload all the files but,
+there may be some missing files becouse github don't allow to upload empty files . 
+
+* So ,if you are reffering this, I strongly recommand you to not to run 'manage.py' file becouse
+that may not be working in your computer. 
+
+* Instead you can create tour own "foodstore" project in your computer
+and copy these code in to corresponding files.
+  
+eg:- 
+* First you need to create project using "django-admin startproject foodstore"
+* Next you need to create 'products' app using "cd todo" -> "python3 manage.py startapp products"
+* Same as 'products' app , you also have to create 'accounts' & 'purchase' apps
+* Then you can fall along with this repo and copy corresponding code to your files
 ## home page - shopping products list
 (click "**Food Store**" )
 
